@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include Head -->
+    <%- include('partials/head') %>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/partials.css">
+    <title>FINE WINES - HOME</title>
+</head>
+<body>
+    <!--Incluyo el partial header-->
+    <%- include('./partials/header.ejs') %>
+    <section class="banner">
+        <div>
+            <img src="/images/portada.jpg" alt="Banner principal">
+            <p> CONSEGUÍ EL MEJOR PRECIO<br> EN LAS MEJORAS BODEGAS DE ARGENTINA</p>
+        </div>
+    </section>
+    <main>
+        <section class="last-visit">
+            <div>
+            <span>Basado en tu última visita</span>
+            </div>
+            <div class="products">
+                <% products.forEach(product => {if(product.visitado == true){%>
+                    <article class="articulo">
+                        <a href="/productDetail/<%= product.id %>"><img src="images/products/<%= product.image %>" class="product_img"></a>
+                        <div class="detalle">
+                            <div class="price-and-discount">
+                                <p class="price">$<%= product.price %></p>
+                                <% if(product.descuento > 0){%>
+                                <p class="discount"><%= product.discount*100 + '% OFF' %></p>
+                                <%}%>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                                <div>
+                                    <h4 class="bodega"><%= product.bodega %></h4>
+                                    <h5 class="varietal"><%= product.varietal %></h5>
+                                </div>
+                        </div>
+                    </article>
+                <%}}) %>
+            </div>
+                  
+        </section>
+            
+        <section class="offers">
+            <div>
+            <span>Ofertas</span>
+            </div>
+            <div class="products">
+                <% products.forEach(product => { if(product.discount > 0){%>
+                    <article class="articulo">
+                        <a href="/productDetail/<%= product.id %>"><img src="/images/products/<%= product.image %>" class="product_img"></a>
+                        <div class="detalle">
+                            <div class="price-and-discount">
+                                <p class="price">$<%= product.price %></p>
+                                <p class="discount"><%= product.discount*100 + '% OFF' %></p>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                                <div>
+                                    <h4 class="bodega"><%= product.bodega %></h4>
+                                    <h5 class="varietal"><%= product.varietal %></h5>
+                                </div>
+                        </div>
+                    </article>
+                <%}}) %>
+            </div>               
+        </section>
+    </main>
+        <%- include('./partials/footer.ejs') %>
+</body>
+</html>

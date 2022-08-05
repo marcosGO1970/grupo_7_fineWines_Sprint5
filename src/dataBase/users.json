@@ -1,0 +1,98 @@
+[
+ {
+  "id": "1",
+  "name": "Luis",
+  "lastName": "Perez",
+  "userName": "SuperMan",
+  "email": "superman@gmail.com",
+  "birthday": "01/01/2001 ",
+  "address": "La paz 1501",
+  "image": "foto.jpg",
+  "password": "1234",
+  "type": "client"
+ },
+ {
+  "nombres": "matias",
+  "apellidos": "logascio",
+  "nombreUsuario": "mati",
+  "email": "matiaslogascio@gmail.com",
+  "fechaNacimiento": "1986-11-28",
+  "domicilio": "av  velez sarfield 2819, madariaga, prov. bs as",
+  "password": "ffff",
+  "confirmPassword": "ffff",
+  "image": "User-img-1659298861120hola.png",
+  "id": 2
+ },
+ {
+  "nombres": "fff",
+  "apellidos": "ffff",
+  "nombreUsuario": "ffff",
+  "email": "ddd@fff",
+  "fechaNacimiento": "0022-02-22",
+  "domicilio": "222",
+  "password": "525",
+  "confirmPassword": "555",
+  "image": "User-img-1659299939404hola.png",
+  "id": 3
+ },
+ {
+  "nombres": "John ",
+  "apellidos": "Doe",
+  "nombreUsuario": "JuanNN",
+  "email": "hola@hotmail.com",
+  "fechaNacimiento": "2022-06-29",
+  "domicilio": "Las Lomitas",
+  "password": "1234",
+  "confirmPassword": "1234",
+  "image": "User-img-1659305832181hola.jpg",
+  "id": 4
+ },
+ {
+  "nombres": "dsfg",
+  "apellidos": "Doe",
+  "nombreUsuario": "JuanNN",
+  "email": "hola@hotmail.com",
+  "fechaNacimiento": "2022-07-15",
+  "domicilio": "Las Lomitas",
+  "password": "1234",
+  "confirmPassword": "1244",
+  "image": "User-img-1659306479258hola.jpg",
+  "id": 5
+ },
+ {
+  "nombres": "John ",
+  "apellidos": "sgdf",
+  "nombreUsuario": "JuanNN",
+  "email": "hola@hotmail.com",
+  "fechaNacimiento": "2022-07-13",
+  "domicilio": "Las Lomitas",
+  "password": "1234",
+  "confirmPassword": "1244",
+  "image": "User-img-1659307203038hola.jpg",
+  "id": 6
+ },
+ {
+  "nombres": "John ",
+  "apellidos": "Doe",
+  "nombreUsuario": "JuanNN",
+  "email": "hola@hotmail.com",
+  "fechaNacimiento": "2022-07-07",
+  "domicilio": "Nuevo User",
+  "password": "1234",
+  "confirmPassword": "12444",
+  "image": "default-image.png",
+  "id": 7
+ },
+ {
+  "nombres": "John ",
+  "apellidos": "Doe",
+  "nombreUsuario": "JuanNN",
+  "email": "hola@hotmail.com",
+  "fechaNacimiento": "2022-08-10",
+  "domicilio": "Nuevo User",
+  "password": "1234",
+  "confirmPassword": "1244",
+  "image": "User-img-1659388459951hola.jpg",
+  "id": 8
+ }
+]

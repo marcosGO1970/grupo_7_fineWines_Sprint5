@@ -1,0 +1,195 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+}
+
+p{
+    font-size: 12px;
+}
+
+
+
+
+section.banner div{
+    width: 100%;
+    position: relative;
+}
+
+section.banner div p{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color:white;
+    font-weight: bold;
+    font-size: 12px;
+    top: 40%;
+}
+
+section.banner div img{
+    width: 100%;
+}
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+h3{
+    color: #666;
+}
+.ocultar-mobile{
+    display:none
+}
+h2{
+    text-align: center;
+    padding: 20px;
+}
+form{
+    display:flex;
+    flex-wrap: wrap;
+}
+.form-div {
+    display: flex;
+    width: 100%;
+    padding: 5px;
+    justify-content: center ;
+    flex-wrap: wrap;
+}
+.form-div input{
+    width:55%;
+    border-radius: 4px;
+    height: 25px;
+    border: 1px solid grey;
+}
+input.foto{
+    border:none;
+}
+.form-button{
+    display: flex;
+    justify-content: center;
+    width: 100%;   
+}
+/*Login button*/
+.form-button button{
+    background-color: rgb(93, 93, 184);
+    color: white;
+    width: 55%;
+    margin-top: 30px;
+    border-radius: 8px;
+    height: 25px;
+}
+/*Formulario register*/
+.form-div label{
+    width: 100%;
+    text-align: left;
+    margin-left: 22.5%;
+}
+/*Formulario interests*/
+.form-interests{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.form-interests label{
+    width:55%;
+    margin-left: 22.5%;
+}
+.form-profile{
+    margin-left:22.5%;
+    margin-top: 10px;
+}
+.form-label{
+    margin-bottom: 5px;
+}
+/*-----Buttons------*/
+.form-buttons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 22.5%;
+}
+.form-buttons button{
+    background-color:black;
+    color: white;
+    width: 120px;
+    margin-top: 30px;
+    border-radius: 8px;
+    height: 25px;
+}
+.form-div input:hover{
+    font-weight: bold;
+}
+.login-form button{
+    transition: all 0.6s;
+}
+.login-form button:hover{
+    background-color: #0331ea;
+}
+textarea.form-input {
+    min-height: 100px;
+    min-width: 55%;
+    resize: both;
+    padding: 15px;
+    border-radius: 4px;
+}
+@media (max-width: 480px){
+
+    .articulo{
+        width: 80%;
+        margin-bottom: 5px;
+       }
+}
+
+@media (min-width: 480px){
+  
+    section.banner div p{
+        font-size: 20PX;
+    }
+    
+    main section div article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    article div.detalle h4{
+        display: block;
+    }
+
+   .products{
+       display:flex;
+       flex-wrap: wrap;
+       justify-content: space-around;
+       align-items: center;
+   }
+
+   .articulo{
+    width: 45%;
+    margin-bottom: 5px;
+   }
+
+   .articulo:hover {
+    transform: scale(1.2);
+    }
+
+    .ocultar-mobile{
+        display: block;
+    }
+}
+
+@media (min-width: 960px){
+    
+    section.banner div p{
+        font-size: 24PX;
+    }
+    .articulo{
+        width: 20%;
+       }
+    .form-container{
+        box-shadow: 0px 0px 10px rgb(100 100 100);
+    }
+    }

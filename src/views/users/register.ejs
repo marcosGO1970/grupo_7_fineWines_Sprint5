@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include Head -->
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/partials.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <title>FINE WINES - REGISTER</title>
+</head>
+
+<body>
+ <!--Incluyo el partial header-->
+ <%- include('../partials/header.ejs') %>
+    <main>
+        <br>
+        <br>
+        <!------- Formulario ---------->
+        <div class="form-container">
+        <h2 class="register-title">Registrate!!</h2>
+        <form class="register-form" action="/user" method="POST" enctype="multipart/form-data">
+            <div class="form-div">
+                <label for="nombres" class="form-label">Nombres</label>
+                <!-- Micro-Desafío 3 required - Clase 15 -->
+                <input type="text" name="nombres" id="nombres" required>
+            </div>
+            <div class="form-div">
+                <label for="apellidos" class="form-label">Apellidos</label>
+                <!-- Micro-Desafío 3 required - Clase 15 -->
+                <input type="text" name="apellidos" required>
+            </div>
+            <div class="form-div">
+                <label for="nombreUsuario" class="form-label">Nombre de usuario/a</label>
+                <!-- Micro-Desafío 3 required - Clase 15 -->
+                <input type="text" name="nombreUsuario" id="nombreUsuario" required>
+            </div>
+            <div class="form-div">
+                <label for="email" class="form-label">Email</label>
+                <!-- Micro-Desafío 3 required - Clase 15 -->
+                <input type="email" name="email" id="email" required>
+            </div>   
+            <div class="form-div">
+                <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento">
+            </div>
+            <div class="form-div">
+                <label for="domicilio" class="form-label">Domicilio</label>
+                <input type="text" name="domicilio" id="domicilio">
+            </div>                           
+            <div class="form-div">
+                <label for="fotoUsuario" class="form-label">Foto de usuario</label>
+                <input class="foto" type="file" name="fotoUsuario" id="fotoUsuario" accept=".png, .jpeg, .jpg" value="default-image.jpg" >
+            </div>
+            <div class="form-div">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" name="password" id="password" required>
+            </div> 
+            <div class="form-div">
+                <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
+                <input type="password" name="confirmPassword" id="confirmPassword" required>
+            </div>
+            <div class="form-buttons">
+                <button type="submit" class="submit-button">Enviar</button>
+                <button type="reset" class="reset-button">Limpiar</button>
+            </div>       
+        </form>
+        <br>
+        <br>
+    </div>
+       
+        <br>
+    </main> 
+    
+
+</body>
+    <!--Incluyo el partial footer-->
+    <%- include('../partials/footer.ejs') %>
+</html>

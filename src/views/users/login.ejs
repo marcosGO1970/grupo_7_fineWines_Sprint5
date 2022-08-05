@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Include Head -->
+    <%- include('../partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/partials.css">
+    <link rel="stylesheet" href="/css/login.css">
+    <title>FINE WINES - LOGIN</title>
+</head>
+<body>
+  <!--Incluyo el partial header-->
+  <%- include('../partials/header.ejs') %>
+    <main>
+        <br>
+        <br>
+        <!------- Formulario ---------->
+        <div class="form-container">
+        <h2 class="register-title">Ingresa!!</h2>
+        <form class="register-form" action="/login" method="GET">
+           
+            <div class="form-div">
+                <label for="nombreUsuario" class="form-label">Nombre de usuario/a</label>
+                <!-- Micro-Desafío 3 required - Clase 15 -->
+                <input type="text" name="nombreUsuario" id="nombreUsuario" required>
+            </div>
+
+            <div class="form-div">
+                <label for="password" class="form-label">Contraseña</label>
+                <!-- Micro-Desafío 3 required - Clase 15 -->
+                <input type="password" name="password" id="password" required>
+            </div> 
+  
+            <div class="form-buttons">
+                <button type="submit" class="submit-button">Enviar</button>
+                <button type="reset" class="reset-button">Limpiar</button>
+            </div>       
+        </form>
+        <br>
+        <br>
+        <div class="registrate">
+            <style> h5{
+                  padding-right: 20px;
+                }
+                </style>
+                <h5>¿No tienes una cuenta?</h5>
+            <a href="/user/register">Regístrate</a>
+        </div>
+    </div>
+    <br><br><br><br><br>
+        <br>
+    </main> 
+    
+
+</body>
+  <!--Incluyo el partial footer-->
+  <%- include('../partials/footer.ejs') %>
+</html>

@@ -1,0 +1,128 @@
+[
+ {
+  "id": 1,
+  "name": "Angelica Zapata    ",
+  "bodega": "Angelica Zapata    ",
+  "varietal": "Malbec    ",
+  "price": "2500",
+  "discount": "0",
+  "category": "Tinto",
+  "description": "El mejor Malbec de Mendoza, pura cepa de los andes, imprescindible!!",
+  "image": [
+   "Angelica Zapata Malbec Alta X 750cc. (full).jpg"
+  ],
+  "visitado": true
+ },
+ {
+  "id": 2,
+  "name": "José Rioja   ",
+  "bodega": "Sebastian Zuccardi   ",
+  "varietal": "Cara Sur Rosado   ",
+  "price": "1800",
+  "discount": "0",
+  "category": "",
+  "description": "Un rosado pipi cucu!!!",
+  "image": [
+   "Cara Sur Rosado - Sebastian Zuccardi - Vino Barreal San Juan.jpg"
+  ],
+  "visitado": true
+ },
+ {
+  "id": 3,
+  "name": "Patricia Lucas ",
+  "bodega": "Salentein ",
+  "varietal": "Espumante Brut Rose ",
+  "price": "1600",
+  "discount": "0",
+  "category": "",
+  "description": "La mejor champaña del pais!!!",
+  "image": [
+   "Champagne Salentein Espumante Brut Rose 750cc.jpg"
+  ],
+  "visitado": true
+ },
+ {
+  "id": 4,
+  "name": "Cristiano  ",
+  "bodega": "DV Catena  ",
+  "varietal": "Cabernet Malbec  ",
+  "price": "1600",
+  "discount": "0.3",
+  "category": "Tinto",
+  "description": "Blend magico",
+  "image": [
+   "DV-CATENA-CABERNET SUAVIGNON-MALBEC.jpg"
+  ],
+  "visitado": false
+ },
+ {
+  "id": 5,
+  "name": "Cristiano  ",
+  "bodega": "DV Catena  ",
+  "varietal": "Malbec Malbec  ",
+  "price": "3500",
+  "discount": "0",
+  "category": "Blanco",
+  "description": "Dos Malbec son mejor que uno!",
+  "image": [
+   "Product-img-1659386486429hola.jpg"
+  ],
+  "visitado": true
+ },
+ {
+  "id": 6,
+  "name": "Cristiano    ",
+  "bodega": "Escorihuela Gascon    ",
+  "varietal": "Gran Reserva Chardonnay    ",
+  "price": "2100",
+  "discount": "0.2",
+  "category": "",
+  "description": "Un blanco freshhhh",
+  "image": [
+   "Escorihuela Gascon Gran Reserva Chardonnay.jpg"
+  ],
+  "visitado": false
+ },
+ {
+  "id": 7,
+  "name": "Cristiano ",
+  "bodega": "Escorihuela Gascon ",
+  "varietal": "Gran Reserva Malbec ",
+  "price": "1500",
+  "discount": "0.2",
+  "category": "",
+  "description": "Grand reserva como pocos...",
+  "image": [
+   "Escorihuela Gascon Gran Reserva Malbec.jpg"
+  ],
+  "visitado": false
+ },
+ {
+  "id": 8,
+  "name": "Cristiano  ",
+  "bodega": "Escorihuela Gascon  ",
+  "varietal": "Malbec  ",
+  "price": "3500",
+  "discount": "0.1",
+  "category": "",
+  "description": "Simple pero gustoso",
+  "image": [
+   "Escorihuela Gascón Malbec Full.jpg"
+  ],
+  "visitado": false
+ },
+ {
+  "name": "Probando esto de crear",
+  "bodega": "Mendoza",
+  "varietal": "Malbec ",
+  "price": "10000",
+  "discount": "0.1",
+  "category": "Blanco",
+  "description": "ghshjdgjhgdjhdj",
+  "image": [
+   "Product-img-1659661602862hola.jpg"
+  ],
+  "visitado": false,
+  "id": 9
+ }
+]

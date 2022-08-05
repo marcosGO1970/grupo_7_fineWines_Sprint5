@@ -1,0 +1,230 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+}
+p{
+    font-size: 12px;
+}
+/*****Botones Editar y Eliminar *******/
+.action-button.edit {
+    background-color: black;
+}
+.action-button {
+    font-family: 'Poppins', 'Roboto', sans-serif;;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.2em;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 30px;
+    margin-top: 15px;
+}
+.action-button.delete {
+    background-color: rgb(248, 69, 37);
+}
+section.banner div{
+    width: 100%;
+    position: relative;
+}
+article img {
+    max-width: 60%;
+    margin-left: 20%;
+}
+section.banner div p{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color:white;
+    font-weight: bold;
+    font-size: 12px;
+    top: 40%;
+}
+
+section.banner div img{
+    width: 100%;
+}
+
+/*MAIN*/
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+main section h3{
+    margin: 20px 0px;
+}
+
+/*
+.zoom{
+     transition: transform .2s;
+}
+.zoom:hover{
+    transform: scale(1.5);
+    
+}*/
+.description1{
+    margin: 20px 0px;
+
+}
+p{
+    font-size: 14px;
+}
+.tipo-vino1{
+   /* border:1px solid blue;*/
+    margin:20px 0px;
+    font-weight: bolder;
+}
+ul{
+    list-style: none;
+}
+.miscelanea{
+    font-weight:300;
+    font-size: 15px;
+    margin: 15px 0px;
+
+}
+.precio-descuento{
+    margin: 20px 0px;
+    display:flex;
+    flex-direction: row-reverse;
+  /*  border:1px solid pink */
+    
+    
+
+}
+.descuento{
+    font-weight: bold;
+    font-size: 15px;
+    color:green;
+    padding: 4px;
+    order:-1;
+}
+.precio{
+    font-weight: bold;
+    font-size: 20px;
+    color:darkslateblue;
+    padding:4px
+    
+}
+.carrito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cantidad{
+    font-size: 18px;
+    font-weight: bold;
+}
+.cantidad1{
+    font-size: 15px;
+    font-weight: bolder;
+    margin: 20px 0px;
+    width: 50%;
+    text-align: center;
+    
+}
+.comprar{
+    height:30px ;
+    width: 50%;
+    background-color: black;
+    border-radius: 5px;
+    color:white;
+    transition: background-color 2s;
+    margin:auto;
+    
+}
+.comprar:hover{
+    background-color: green; 
+  
+}
+.comprar i{
+    display:inline-block;
+    padding-right: 10px;
+    
+
+}
+
+
+@media (min-width: 768px) {
+    main section article img{
+       max-width: 30%;
+        float:left;
+        max-height: 500px;
+        margin-left: 0;
+        margin-right:  5% ;
+    }
+
+    .main-article{
+        width: 50%;
+        float:right;
+        
+    }
+    .precio-descuento{
+        padding:20px;
+    }
+    .carrito{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        padding:20px;
+        background-color: lavender;
+        border-radius: 9px;
+    }
+    .caja-carrito{
+        box-shadow: #666;
+        background-color:#F5F5F5;
+        width: 100%;
+        margin:10px 0px;
+    }
+    .cantidad{
+        font-size: 20px;
+        font-weight: bold;
+        max-width: 50%;
+    }
+    .cantidad1{
+        font-size: 20px;
+        font-weight: bolder;
+        margin: 20px 0px;
+        width: 50%;
+        text-align: center;
+        max-width: 50%;
+    }
+    .comprar{
+        font-size: 20px;
+    }
+    header nav{
+        display: block;
+    }
+    }
+    @media(min-width: 1024px){
+        .portada{
+            height: 75%;
+        }
+        .last-visit{
+            display: flex;
+            flex-direction:column;
+            /*border:2px solid red*/
+        }
+        .carrito{
+            background-color: #F5F5F5;
+        }
+        .caja-carrito{
+            width: 50%;
+            float:left;
+        }
+        .precio{
+            font-size: 25px;
+        }
+        .descuento{
+            font-size: 20px;
+        }
+        
+        
+
+    }

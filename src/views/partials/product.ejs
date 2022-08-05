@@ -1,0 +1,53 @@
+<section class="last-visit">
+    <h3><%= product.bodega %></h3>
+    <div class="products">
+        
+        <article>
+            <div class="imagen">
+                <img class="zoom"src="/images/products/<%= product.image %> " class="product_img" alt="vino bressia">
+            </div>
+            <div class="main-article">
+                 <div class="description1">
+                    <p class="description2"><%= product.description %> </p>
+                </div>
+            </div>
+            
+        </article>
+        <article>
+        <div class="tipo-vino">
+            <div class="tipo-vino1">
+               <ul class="lista-vino">
+                <li class="detalle-lista"><%= product.varietal %></li>
+                <li class="detalle-lista"><%= product.bodega %></li>
+               </ul>
+            </div>
+            <div class="miscelanea">
+                <p class="miscelanea1">Consulte por envoltorios, cajas y estuches de diseño para que este producto sea obsequio único. Envíos a CABA y GBA con nuestra propia flota, siguiendo todas las normas de seguridad sanitaria. Aceptamos Mercadopago, tarjetas de crédito y transferencia bancaria.</p>
+            </div>
+        </div>
+        </article>
+        <article>
+            <div class="caja-carrito">
+                <div class="precio-descuento">
+                    <p class="precio">$ <%= product.price %></p>
+                    <% if(product.discount > 0){%>
+                        <p class="descuento"><%= product.discount*100 + '% OFF' %></p>
+                        <%}%>
+                </div><br><br>
+                <div class="carrito">
+                    
+                    <label class="cantidad">Cantidad:</label>
+                    <select class="cantidad1">
+                        <option value="1"> 1</option>
+                        <option value="2"> 2 unidades</option>
+                        <option value="3"> 3 unidades</option>
+                        <option value="4"> 4 unidades</option>
+                    </select>
+                    <button class="comprar"type="submit"><i class="fas fa-shopping-basket"></i>Comprar</button>
+                </div><br>
+                </div>
+            </article>
+          
+    </div>  
+            
+</section>

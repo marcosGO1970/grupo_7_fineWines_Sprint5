@@ -1,0 +1,166 @@
+/*HEADER*/
+a {color: #000;}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+}
+
+header{
+    background-color:  #FFF;
+}
+.top-header{
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20vh;
+}
+#logo{
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+}
+/*------------ form buscar----------------*/
+header .form {
+    width: 65%;
+    max-width: 280px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+}
+header .form input{
+    border-radius: 8px 0 0 8px;
+    border: solid 1px black;
+    border-right: none;
+    height: 25px;
+    width: 130px
+}
+header .form button{
+    border-radius: 0 8px 8px 0;
+    border: solid 1px black;
+    border-left: none;
+    height: 25px;
+    background-color: #FFF;
+}
+div.burger-menu{
+    text-align: center;
+    padding: 10px 0px 20px 0px;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+.burger-menu i{
+    background-color:#F5F5F5;
+    border-radius: 5px;
+    color:#000;
+    font-size: 10px;
+    padding: 10px;
+}
+header div.top-header p{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+header div i{
+    padding: 5px;
+}
+header nav{
+
+    font-size: 12px;
+    display: none;
+    border-color: black;
+    background-color: black;
+   
+}
+header nav ul{
+    display:flex;
+    flex:wrap;
+    justify-content: space-around;
+    align-items: center;
+    height:4.5em;
+}
+header ul li{
+    list-style-type: none;
+}
+header ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+}
+.clase-iconos-header{
+    display:flex;
+    align-items: center;
+    justify-content: right;
+    display: none;
+}
+.ocultar-mobile{
+    display:none
+}
+@media (min-width: 480px){
+    .ocultar-mobile{
+        display: block;
+    }
+    header nav{
+        display: block;  
+    }
+    .clase-iconos-header{
+        display: block;
+    }
+ /*======== Form buscar ==========*/ 
+    header .form input{
+        height: 30px;
+        width: 200px
+    }
+    header .form button{
+        height: 30px;
+    }
+    .burger-menu{
+        display: none;}
+}
+
+/* FOOTER*/
+
+/* Estilos del footer */
+footer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+   text-align: center;
+   background-color: black;
+}
+footer .fa-instagram:before {
+    background-color: black;
+    color: white;
+  }
+footer section i{   
+    margin-top: 10px;
+    background-color: white;
+}
+
+footer section h2{
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    margin-top: 15px;
+}
+
+footer section p{
+    margin-top: 10px;
+    font-size: 12px;
+    color: white;
+    margin-bottom:15px;
+}
+
+footer h2{
+    padding: 20px;
+}

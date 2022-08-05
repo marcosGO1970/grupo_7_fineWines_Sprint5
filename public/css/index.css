@@ -1,0 +1,183 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    background-color: #F5F5F5;
+}
+
+p{
+    font-size: 12px;
+}
+
+section.banner div{
+    width: 100%;
+    position: relative;
+}
+
+section.banner div p{
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    color:white;
+    font-weight: bold;
+    font-size: 12px;
+    top: 40%;
+}
+
+section.banner div img{
+    width: 100%;
+}
+
+
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.last-visit{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.last-visit div span,
+.offers div span{
+    padding: 5px;
+    font-size: 16px;
+    color: white;
+    background-color: black;
+}
+
+h3{
+    color: #666;
+}
+
+.products{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.articulo{
+    background-color: #FFF;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: all 800ms;
+}
+
+.product_img{
+    max-height: 200px;
+}
+
+.detalle{
+    width: 100%;
+    border-top: 1px solid #ebebeb;
+    padding: 15px;
+}
+
+.price-and-discount{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.price{
+    font-size: 16px;
+    width: 28%;
+    margin-top: 5px;
+}
+
+.discount{
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 6px;
+    margin-left: 10px;
+}
+
+.bodega{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.varietal{
+    font-size: 12px;
+    font-weight: normal
+}  
+
+.price-and-discount i{
+    margin-top: 10px;
+    text-align: center;
+}
+
+main section article i,
+.discount{
+    color: #39b54a;
+    width: 45%;
+}
+
+.ocultar-mobile{
+    display:none
+}
+
+
+@media (max-width: 480px){
+  
+    .articulo{
+        width: 80%;
+        margin-bottom: 5px;
+       }
+}
+
+@media (min-width: 480px){
+  
+    section.banner div p{
+        font-size: 20PX;
+    }
+    
+    main section div article{
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+
+    article div.detalle h4{
+        display: block;
+    }
+
+   .products{
+       display:flex;
+       flex-wrap: wrap;
+       justify-content: space-around;
+       align-items: center;
+   }
+
+   .articulo{
+    width: 45%;
+    margin-bottom: 5px;
+   }
+
+   .articulo:hover {
+    transform: scale(1.2);
+    }
+
+    .ocultar-mobile{
+        display: block;
+    }
+}
+
+@media (min-width: 960px){
+    
+    section.banner div p{
+        font-size: 24PX;
+    }
+    .articulo{
+        width: 21%;
+       }
+    }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--Incluyo el partial head-->
+    <%- include('./partials/head.ejs') %>
+    <link rel="stylesheet" href="/css/productCart.css">
+    <link rel="stylesheet" href="/css/partials.css">
+    <title>Fine Wines - CART</title>
+</head>
+<body>
+    <!--Incluyo el partial header-->
+    <%- include('./partials/header.ejs') %>
+    <main>
+        <div class="article-container">
+        <h1>Carrito de compras</h1>
+        <br>
+         <article class="articulo">
+            <div class="img-titulo-precio">
+            <i class="fas fa-trash-alt"></i>
+            <img class="contenedor-img" src="images/products/alamosMalbec.jpg" width="360" alt="alamosMalbec">
+            <h4 class="descripcion">Los Alamos Malbec</h4>
+            <p class="precio">$6000</p>
+
+                <div class="cantidad-input">
+                    <label for="texto-cantidad" class="cantidad">Cantidad</label>
+                    <input type="number" value="1" min="1" max="25">
+                </div>  
+            </div>
+        </article>
+        <article class="articulo">
+            <div class="img-titulo-precio">
+            <i class="fas fa-trash-alt"></i>
+            <img class="contenedor-img" src="/images/products/santa-julia-tintillo-2019.jpg" width="360" alt="Sta.JuliaTintillo">
+            <h4 class="descripcion">Santa Julia Tintillo 2019</h4>
+                <p class="precio">$65.290</p>
+
+                    <div class="cantidad-input">
+                        <label for="texto-cantidad" class="cantidad">Cantidad</label>
+                        <input type="number" value="1" min="1" max="25">
+                    </div>  
+            </div>
+         </article>
+         <article class="articulo">
+            <div class="img-titulo-precio">
+                <i class="fas fa-trash-alt"></i>
+                <img class="contenedor-img" src="/images/products/stpahyle-iris-malbec-2021.jpg" width="360" alt="Stpahyle Iris Malbec">
+                <h4 class="descripcion">Stpahyle Iris Malbec</h4>
+                <p class="precio">$7.290</p>
+                
+                    <div class="cantidad-input">
+                        <label for="texto-cantidad" class="cantidad">Cantidad</label>
+                        <input type="number" value="1" min="1" max="25">
+                    </div>  
+
+             </div>
+        </article>
+    </div>
+
+            <!--Sección seguir comprando-->
+                <div class="seguir-comprando">
+                    <p class="comprando"><a href="/" class="seguir"><i class="fas fa-chevron-circle-left"></i>Seguir comprando</a></p>
+                </div>
+
+            <!--Detalle de compra-->
+
+            <article class="total">
+                <h2 class="titulos">Detalle</h2>
+                
+                <p class="sub-total">Subtotal:</p>
+                <p class="resultados">$98.443</p>
+                <p class="envio">Envio:</p>
+                <p class="resultados">Gratis</p>
+                <h2 class="titulos">Total:</h2>
+                <p class="resultados">$98.443</p>
+                <button type="submit" value="comprar" class="button">Comprar ahora</button>
+                
+
+
+            </article>
+
+    </main>
+
+    <!--Incluyo el partial footer-->
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>
