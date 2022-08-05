@@ -1,4 +1,5 @@
-
+const path = require('path')
+const fs = require('fs');
 const jsonDB = require('../model/jsonDatabase');
 const productModel = jsonDB('products')
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -95,35 +96,7 @@ const controller = {
         console.log('cree un nuevo producto')
         res.redirect('/')
     },
-	store2: (req, res) => {
-		// Acá se trata como un array de files
-		let imagenes= []
-// leo secuencialmente el array de fotos y las cargo en el array de imágenes
-//  puede ser que venga una sóla foto
-        for(let i = 0 ; i<req.files.length;i++){
-            imagenes.push(req.files[i].filename)
-        }
-		
-		console.log(req.files);
-		
-		// Atrapo todos los campos del formulario
-
-		const newProduct = {
-			...req.body, // spread operator, inyecta campos del body del formulario y sus campos al new product
-			// Si no mando imágenes pongo na por defecto
-			//image:req.files != undefined?imagenes:"default.jpg"
-			image: req.files.length >= 1  ? imagenes : ["default-image.png"],
-			
-			visitado: false
-
-		}
-
-		productModel.create(newProduct)
-		console.log('cree un nuevo producto')
-		res.redirect('/')
-	},
-
-
+	
 	// Update - Form to edit
 
 

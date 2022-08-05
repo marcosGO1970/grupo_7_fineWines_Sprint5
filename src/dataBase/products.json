@@ -57,15 +57,15 @@
  },
  {
   "id": 5,
-  "name": "Cristiano  ",
-  "bodega": "DV Catena  ",
-  "varietal": "Malbec Malbec  ",
+  "name": "Cristiano     ",
+  "bodega": "DV Catena     ",
+  "varietal": "Malbec Malbec     ",
   "price": "3500",
   "discount": "0",
   "category": "Blanco",
   "description": "Dos Malbec son mejor que uno!",
   "image": [
-   "Product-img-1659386486429hola.jpg"
+   "Product-img-1659739006377hola.jpg"
   ],
   "visitado": true
  },
@@ -110,18 +110,5 @@
    "Escorihuela Gascón Malbec Full.jpg"
   ],
   "visitado": false
- },
- {
-  "name": "Probando esto de crear",
-  "bodega": "Mendoza",
-  "varietal": "Malbec ",
-  "price": "1000",
-  "discount": "0.1",
-  "category": "Blanco",
-  "description": "123456",
-  "image": [
-   "Product-img-1659736665099hola.jpg"
-  ],
-  "id": 9
  }
 ]

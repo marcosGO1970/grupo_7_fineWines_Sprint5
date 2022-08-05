@@ -15,7 +15,8 @@ p{
 }
 .errorValidacion{
     width: 55%;
-    margin-left: 22.5%
+    margin-left: 22.5%;
+    color: red
 }
 
 
