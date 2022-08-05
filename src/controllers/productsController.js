@@ -30,8 +30,72 @@ const controller = {
 	},
 
 	// Create -  Method to store
-	
 	store: (req, res) => {
+
+        // const files = req.files;
+        const { files } = req;
+        
+        // Esto es más que nada informativo para nosotros no es indispensable
+        console.log("-----LLEGO/ARON ESTA/S FOTO/S --------")
+        files.forEach( file => {
+            console.log(file.filename);
+        })        
+        
+        // request
+        // console.log('Esto tiene el request');
+        // console.log(req);
+
+        // Comienzo a validar//Guardo los resultados de la validacion en una variable
+        const resultadosValidaciones = validationResult(req);
+        // console.log('Esto tiene el resultadosValidaciones');      
+        // console.log(resultadosValidaciones);
+       
+        // Con este if preguntamos si hay errores de validación
+        if (!resultadosValidaciones.isEmpty()){
+            console.log("----- ojo HAY ERRORES -----------------")
+            
+            // Si hay errores borramos los archivos que cargó multer
+            files.forEach( file => {
+                const filePath = path.join(__dirname, `../../public/images/products/${file.filename}`);
+                fs.unlinkSync(filePath);
+            })
+            
+            console.log("-------- my body -------------------")
+            console.log(req.body);  
+
+            console.log("-------- resultadosValidaciones.mapped() -------------------")
+            console.log(resultadosValidaciones.mapped());  
+
+
+            return res.render('product-create-form', {
+                errors: resultadosValidaciones.mapped(),
+                // oldData son los datos recién cargados es decir el req.body
+                oldData: req.body
+            })
+        }
+
+        console.log("--Muy bien, no hay errores ---------------------------");
+
+        // Creamos un array vacío para ir almacenado los nombres de los archivos
+        let imagenes = [];
+
+        //  Leo de manera secuencial  el array files del request y cargo los nombres en el array de imágenes
+        //  puede ser que venga una sola foto
+        files.forEach( imagen => {
+            imagenes.push(imagen.filename);
+        })
+
+        // Atrapo todos los campos del formulario
+        const newProduct = {
+            ...req.body,
+            // Si no mando imágenes pongo una por defecto
+            image: req.files.length >= 1 ? imagenes : ["default-image.png"]
+        }
+        productModel.create(newProduct);
+        console.log('cree un nuevo producto')
+        res.redirect('/')
+    },
+	store2: (req, res) => {
 		// Acá se trata como un array de files
 		let imagenes= []
 // leo secuencialmente el array de fotos y las cargo en el array de imágenes

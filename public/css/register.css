@@ -13,7 +13,10 @@ body{
 p{
     font-size: 12px;
 }
-
+.errorValidacion{
+    width: 55%;
+    margin-left: 22.5%
+}
 
 
 

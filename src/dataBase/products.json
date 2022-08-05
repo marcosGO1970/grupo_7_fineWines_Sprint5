@@ -115,14 +115,13 @@
   "name": "Probando esto de crear",
   "bodega": "Mendoza",
   "varietal": "Malbec ",
-  "price": "10000",
+  "price": "1000",
   "discount": "0.1",
   "category": "Blanco",
-  "description": "ghshjdgjhgdjhdj",
+  "description": "123456",
   "image": [
-   "Product-img-1659661602862hola.jpg"
+   "Product-img-1659736665099hola.jpg"
   ],
-  "visitado": false,
   "id": 9
  }
 ]
