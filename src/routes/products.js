@@ -4,9 +4,13 @@ const router = express.Router();
 
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
+// Multer
 const uploadPrep = require('../middleware/middlemulter')
-const productCreateValidation = require('../middleware/productCreateValidation');
 const upload = uploadPrep('products','Product')//Carpeta y entity
+// Middlewares de express-validator
+const productCreateValidation = require('../middleware/productCreateValidation');
+const productEditValidation = require('../middleware/productEditValidation');
+
 console.log('pase por el productsRouter');
 /*** GET ALL PRODUCTS ***/ 
 //router.get('/', productsController.index); 
@@ -22,7 +26,7 @@ router.get('/detail/:id', productsController.detail);
 
 /*** EDIT ONE PRODUCT ***/ 
 router.get('/edit/:id', productsController.edit); 
-router.put('/edit/:id',upload.array('image'), productsController.update); 
+router.put('/edit/:id',upload.array('image'),productEditValidation, productsController.update); 
 
 
 /*** DELETE ONE PRODUCT***/ 

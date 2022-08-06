@@ -7,6 +7,14 @@ const productEditValidation = [
         .notEmpty().withMessage("No puede estar el campo vacio").bail()
         .isLength({ min: 4 }).withMessage('Debes escribir un nombre de producto con más de 4 caracteres'),
    
+    body('bodega')
+        .notEmpty().withMessage("No puede estar el campo vacio").bail()
+        .isLength({ min: 4 }).withMessage('Debes escribir una bodega con más de 4 caracteres'),
+    
+    body('varietal')
+        .notEmpty().withMessage("No puede estar el campo vacio").bail()
+        .isLength({ min: 4 }).withMessage('Debes escribir un varietal con más de 4 caracteres'),
+        
 	body('price')
         .notEmpty().withMessage("No puede estar el campo vacio"),
         

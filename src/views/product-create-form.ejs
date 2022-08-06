@@ -43,7 +43,9 @@
 					<% } %>
 					<div class="form-div">
 						<label for="price" class="form-label">Precio del producto:</label>
-						<input type="number" id="price" name="price" placeholder="Ej: 1000" value= "<%= locals.oldData ? oldData.price : null %>" class="form-input">
+						<input type="number" id="price" name="price" placeholder="Ej: 1000" 
+						value= "<%= locals.oldData ? oldData.price : null %>" 
+						class="form-input">
 					</div>
 					<br><% if (locals.errors && errors.price) { %>
 						<div class="errorValidacion">
@@ -66,7 +68,9 @@
 					
 					<div class="form-div">
 						<label for="image" class="form-label">Foto:</label>
-						<input type="file" id="image" accept=".png, .jpeg, .jpg" name="image" placeholder="Ingrese una foto"  multiple  class="form-input">
+						<input type="file" id="image" accept=".png, .jpeg, .jpg" 
+						name="image" placeholder="Ingrese una foto"  multiple  class="form-input"
+						value="<%= locals.oldData ? oldData.image : null  %>">
 					</div>
 					<% if (locals.errors && errors.image) { %>
 						<div class="errorValidacion">

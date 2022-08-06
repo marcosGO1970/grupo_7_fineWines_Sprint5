@@ -22,38 +22,91 @@
         <form class="register-form" action="/products/edit/<%= productToEdit.id %>?_method=PUT" method="POST" enctype="multipart/form-data">				
             <div class="form-div">
                 <label for="name" class="form-label">Nombre del producto:</label>
-                <input type="text" id="name" name="name" value="<%= productToEdit.name %> " class="form-input">
+                <input type="text" id="name" name="name" 
+                value="<%= locals.oldData ? oldData.name : productToEdit.name %>"
+                class="form-input">
             </div>
+            <% if (locals.errors && errors.name) { %>
+                <div class="errorValidacion">
+                    <p><%= errors.name.msg %></p>
+                </div> 
+            <% } %>
             <div class="form-div">
                 <label for="bodega" class="form-label">Bodega:</label>
-                <input type="bodega" id="bodega" name="bodega" value="<%= productToEdit.bodega %> " class="form-input">
+                <input type="bodega" id="bodega" name="bodega" 
+                value="<%= locals.oldData ? oldData.bodega : productToEdit.bodega %>"
+                class="form-input">
             </div>
+            <% if (locals.errors && errors.bodega) { %>
+                <div class="errorValidacion">
+                    <p><%= errors.bodega.msg %></p>
+                </div> 
+            <% } %>
             <div class="form-div">
                 <label for="varietal" class="form-label">Varietal:</label>
-                <input type="text" id="varietal" name="varietal" value="<%= productToEdit.varietal %> " class="form-input">
+                <input type="text" id="varietal" name="varietal" 
+                value="<%= locals.oldData ? oldData.varietal : productToEdit.varietal %>"
+                class="form-input">
             </div>
+            <% if (locals.errors && errors.varietal) { %>
+                <div class="errorValidacion">
+                    <p><%= errors.varietal.msg %></p>
+                </div> 
+            <% } %>
             <div class="form-div">
                 <label for="price" class="form-label">Precio del producto:</label>
-                <input type="number" id="price" name="price"   value=<%= parseInt(productToEdit.price) %> class="form-input">
+                <input type="number" id="price" name="price"   
+                value="<%= locals.oldData ? oldData.price : productToEdit.price %>" 
+                class="form-input">
             </div>
+            <% if (locals.errors && errors.price) { %>
+                <div class="errorValidacion">
+                    <p><%= errors.price.msg %></p>
+                </div> 
+            <% } %>
             <div class="form-div">
                 <label for="discount" class="form-label">Descuento:</label>
-                <input type="number" id="discount" name="discount" min="0" max="1" step="0.01" value=<%= productToEdit.discount %>  class="form-input">
+                <input type="number" id="discount" name="discount" min="0" max="1" step="0.01" 
+                value=<%= productToEdit.discount %>  
+                class="form-input">
             </div>
             <div class="form-div">
                 <label for="image" class="form-label">Foto:</label>
-                <input type="file" id="image" accept=".png, .jpeg, .jpg" name="image" placeholder="Ingrese una foto" class="form-input" value="<%= productToEdit.image[0]%>"  multiple>
+                <input type="file" id="image" accept=".png, .jpeg, .jpg" 
+                name="image" placeholder="Ingrese una foto" class="form-input" 
+                value="<%= productToEdit.image[0]%>"  multiple>
             </div>
+            <% if (locals.errors && errors.image) { %>
+                <div class="errorValidacion">
+                    <p><%= errors.image.msg %></p>
+                </div> 
+            <% } %>
             <div class="form-div">
                 <label for="category" class="form-label">Categoría:</label>
                 <select name="category" id="category" class="form-input">
                     <option value="">Elegí</option>
+                    <% if (locals.oldData && oldData.category) { %>
+                        <option value="Tinto" <%= locals.oldData && oldData.category == "Tinto" ? "selected" : null %>>
+                            Tinto</option>
+                        <option value="Blanco" <%= locals.oldData && oldData.category == "Blanco" ? "selected" : null %>>
+                            Blanco</option>
+                        <option value="Rosado" <%= locals.oldData && oldData.category == "Rosado" ? "selected" : null %>>
+                            Rosado</option>
+                        <option value="Espumante" <%= locals.oldData && oldData.category == "Espumante" ? "selected" : null %>>
+                            Espumante</option>   
+                        <% } else { %>  
 					<option value="Tinto" <%= productToEdit.category == "Tinto" ? "selected" : "" %>>Tinto</option>
 					<option value="Blanco" <%= productToEdit.category == "Blanco" ? "selected" : "" %>>Blanco</option>
                     <option value="Rosado" <%= productToEdit.category == "Rosado" ? "selected" : "" %>>Rosado</option>
                     <option value="Espumante" <%= productToEdit.category == "Espumante" ? "selected" : "" %>>Espumante</option>
+                    <% } %>
                 </select>
             </div>
+            <% if (locals.errors && errors.category) { %>
+                <div class="errorValidacion">
+                    <p><%= errors.category.msg %></p>
+                </div> 
+            <% } %>
             <div class="form-div">
                 <label for="description" class="form-label">Descripción:</label>
                 <textarea name="description" id="description" class="form-input"><%= productToEdit.description%></textarea>

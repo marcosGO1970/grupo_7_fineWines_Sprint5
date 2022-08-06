@@ -1,3 +1,5 @@
+const path = require('path')
+const fs = require('fs');
 const jsonDB = require('../model/jsonDatabase.js');
 const userModel = jsonDB('users')
 const { validationResult } = require("express-validator");
