@@ -16,7 +16,10 @@
 			<form class="register-form" action="/products" method="POST" enctype="multipart/form-data">				
 					<div class="form-div">
 						<label for="name" class="form-label">Nombre del producto:</label>
-						<input type="text" id="name" name="name" placeholder="Ej: Cordero  Piel de Lobo" value= "<%= locals.oldData ? oldData.name : null %>"class="form-input">
+						<input type="text" id="name" name="name" 
+						placeholder="Ej: Cordero  Piel de Lobo" 
+						value= "<%= locals.oldData ? oldData.name : null %>"
+						class="form-input">
 					</div>
 					<br><% if (locals.errors && errors.name) { %>
 						<div class="errorValidacion">
@@ -25,7 +28,9 @@
 					<% } %>
 					<div class="form-div">
 						<label for="bodega" class="form-label">Bodega:</label>
-						<input type="bodega" id="bodega" name="bodega" placeholder="Ej: Etchart" class="form-input">
+						<input type="bodega" id="bodega" name="bodega" 
+						placeholder="Ej: Etchart" value= "<%= locals.oldData ? oldData.bodega : null %>"
+						class="form-input">
 					</div>
 					<br><% if (locals.errors && errors.bodega) { %>
 						<div class="errorValidacion">
@@ -34,7 +39,9 @@
 					<% } %>
 					<div class="form-div">
 						<label for="varietal" class="form-label">Varietal:</label>
-						<input type="text" id="varietal" name="varietal" placeholder="Ej: Tinto" class="form-input">
+						<input type="text" id="varietal" name="varietal" 
+						placeholder="Ej: Tinto" value= "<%= locals.oldData ? oldData.varietal : null %>"
+						class="form-input">
 					</div>
 					<br><% if (locals.errors && errors.varietal) { %>
 						<div class="errorValidacion">
