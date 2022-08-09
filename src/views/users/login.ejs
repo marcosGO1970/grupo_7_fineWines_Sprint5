@@ -23,6 +23,11 @@
                 <!-- Micro-Desafío 3 required - Clase 15 -->
                 <input type="text" name="nombreUsuario" id="nombreUsuario" required>
             </div>
+            <% if(locals.errors && errors.credenciales){ %> 
+            <div class="errorValidacion">
+                <%= errors.credenciales.msg  %> 
+            </div>
+            <% } %> 
 
             <div class="form-div">
                 <label for="password" class="form-label">Contraseña</label>
@@ -49,9 +54,7 @@
     <br><br><br><br><br>
         <br>
     </main> 
-    
-
-</body>
   <!--Incluyo el partial footer-->
   <%- include('../partials/footer.ejs') %>
+</body>
 </html>

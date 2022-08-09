@@ -11,6 +11,12 @@ body{
     background-color: #F5F5F5;
 }
 
+.errorValidacion{
+    width: 55%;
+    margin-left: 22.5%;
+    color: red
+}
+
 p{
     font-size: 12px;
 }

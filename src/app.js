@@ -3,6 +3,13 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const methodOverride = require('method-override');
+const session = require('express-session')
+
+app.use(session({
+    secret:'xx',
+    resave: false,
+    saveUnitialized: false,
+}))
 //const session = require("express-session");
 //const cookies = require("cookie-parser");
 //Rutas: hay una a / que es el mainRouter.js

@@ -1,7 +1,7 @@
 {
   "name": "pimienta-con-sal",
   "version": "1.0.0",
-  "description": "",
+  "description": "https://trello.com/b/YzDmkwff/fine-wines",
   "main": "index.js",
   "scripts": {
     "start": "node src/app.js",
@@ -18,5 +18,13 @@
     "method-override": "^3.0.0",
     "multer": "^1.4.5-lts.1",
     "nodemon": "^2.0.19"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcosGO1970/grupo_7_fineWines_Sprint5.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marcosGO1970/grupo_7_fineWines_Sprint5/issues"
+  },
+  "homepage": "https://github.com/marcosGO1970/grupo_7_fineWines_Sprint5#readme"
 }

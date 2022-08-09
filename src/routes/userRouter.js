@@ -11,10 +11,11 @@ console.log('pase por el userRouter');
 
 router.get('/login', userController.login);
 
-router.get('/register', userController.register);
+router.post('/login', userController.loginProcess);
 
+router.get('/register', userController.register);
 //router.post('/', upload.array('image'), userController.store);
 // array() para subir muchos archivos
-router.post('/', upload.single('fotoUsuario'), userController.store);
+router.post('/register', upload.single('fotoUsuario'), userController.store);
 
 module.exports = router;
