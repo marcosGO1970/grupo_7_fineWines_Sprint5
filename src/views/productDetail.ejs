@@ -12,11 +12,14 @@
     <%- include('./partials/header.ejs') %>
     
     <main>
-        <%- include('./partials/product.ejs')  %> 
-        <a class='action-button edit' href="/products/edit/<%= product.id %>">Editar producto?</a>
-        <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
-            <button type="submit" class="action-button delete">Eliminar?</button>
-        </form>
+        <%- include('./partials/product.ejs')  %>
+        <% if(!locals.isLogged){%>
+            <% } else{%> 
+                <a class='action-button edit' href="/products/edit/<%= product.id %>">Editar producto?</a>
+                <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                    <button type="submit" class="action-button delete">Eliminar?</button>
+                </form>
+               <% } %>
     </main>
     <br>
 

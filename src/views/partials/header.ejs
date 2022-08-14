@@ -29,7 +29,10 @@
                 <li><a href="#">BLANCOS</a></li>
                 <li><a href="#">ROSADOS</a></li>
                 <li><a href="#">ESPUMANTES</a></li>
-                <li><a href="/products/create">Admin</a></li>
+                <% if(!locals.isLogged){%>
+                    <% } else{%> 
+                        <li><a href="/products/create">Admin</a></li>
+                       <% } %>
             </ul>
         
         </nav> 
