@@ -22,5 +22,17 @@
   "password": "fffff",
   "confirmPassword": "fffff",
   "image": "default-image.png"
+ },
+ {
+  "id": 3,
+  "nombres": "matias",
+  "apellidos": "loga",
+  "nombreUsuario": "mati",
+  "email": "mati@loga.com",
+  "fechaNacimiento": "2222-02-22",
+  "domicilio": "avenida",
+  "password": "$2a$10$sHF9Pj0uGQPTM3lrLEJMl.WKWd29CPBZ/LJybKGM5CPoNjKm0Z2xa",
+  "confirmPassword": "prueba",
+  "image": "default-image.png"
  }
 ]

@@ -3,7 +3,7 @@ const fs = require('fs');
 const jsonDB = require('../model/jsonDatabase.js');
 const userModel = jsonDB('users')
 const { validationResult } = require("express-validator");
-
+const bcryptjs = require('bcryptjs');
 //Objeto literal userController
 //Viene de userRouter a cada modulo
 
@@ -52,8 +52,11 @@ const userController = {
 		
 		//let imagen = req.file.filename
 		const newUser = {
-			id: 1,
+			id: 1, 
 			...req.body,
+			//piso el password del body con la psw hasheada. 
+			//El objeto literal no puede tener dos passwords por eso la pisa
+			password: bcryptjs.hashSync(req.body.password, 10),
 			// Si no mando imágenes pongo na por defecto
 			//image:req.files != undefined?imagenes:"default.jpg"
 			image: req.file !== undefined ? req.file.filename : "default-image.png",
