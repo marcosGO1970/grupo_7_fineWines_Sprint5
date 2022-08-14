@@ -14,7 +14,9 @@ const userController = {
     },
 
 	loginProcess: (req, res) => {
+		console.log("llego al proceso de login")
 		let userToLogin = userModel.findFirstByField('nombreUsuario', req.body.nombreUsuario)
+		console.log(userToLogin)
 
 		if(userToLogin){
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
@@ -28,9 +30,9 @@ const userController = {
 				req.session.userLogged = userToLogin
 				return res.render('users/profile')
 			}
-			let errors = {credenciales: {msg: 'las credenciales son invalidas'}}
-			return res.render('users/login.ejs',{errors})
-
+			return res.render('users/login.ejs',{errors: 
+													{credenciales: 
+														{msg: 'las credenciales son invalidas'}}})
 		}
 	},
 
