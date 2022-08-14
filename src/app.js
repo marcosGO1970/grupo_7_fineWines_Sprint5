@@ -8,7 +8,7 @@ const session = require('express-session')
 app.use(session({
     secret:'xx',
     resave: false,
-    saveUnitialized: false,
+    saveUninitialized: false,
 }))
 //const session = require("express-session");
 //const cookies = require("cookie-parser");

@@ -19,6 +19,10 @@ const userController = {
 		if(userToLogin){
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
 			if(isOkThePassword){
+
+				// borro la psw para que no quede en las cookies
+				delete userToLogin.password;
+				
 				// en el request, en session genero una propiedad que se va a llamar 
 				//userLogged con la informacion del usuario en sesion
 				req.session.userLogged = userToLogin
