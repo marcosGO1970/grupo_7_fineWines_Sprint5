@@ -1,7 +1,7 @@
 const path = require('path')
 const fs = require('fs');
 const jsonDB = require('../model/jsonDatabase.js');
-const users = jsonDB('users')
+const userModel = jsonDB('users')
 const { validationResult } = require("express-validator");
 
 //Objeto literal userController
@@ -14,7 +14,7 @@ const userController = {
     },
 
 	loginProcess: (req, res) => {
-		let userToLogin = users.findFirstByField('userName', req.body.nombreUsuario)
+		let userToLogin = userModel.findFirstByField('nombreUsuario', req.body.nombreUsuario)
 
 		if(userToLogin){
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
@@ -26,7 +26,7 @@ const userController = {
 				// en el request, en session genero una propiedad que se va a llamar 
 				//userLogged con la informacion del usuario en sesion
 				req.session.userLogged = userToLogin
-				return res.render('user/profile')
+				return res.render('users/profile')
 			}
 			let errors = {credenciales: {msg: 'las credenciales son invalidas'}}
 			return res.render('users/login.ejs',{errors})
@@ -34,8 +34,13 @@ const userController = {
 		}
 	},
 
+	logout: (req,res) => {
+		req.session.destroy();
+		return res.redirect('/')
+	},
+
 	profile: (req,res) => {
-		res.render('profile', {user: req.session.userLogged})
+		res.render('users/profile.ejs', {user: req.session.userLogged})
 
 	},
 
@@ -47,10 +52,11 @@ const userController = {
 		
 		//let imagen = req.file.filename
 		const newUser = {
+			id: 1,
 			...req.body,
 			// Si no mando imágenes pongo na por defecto
 			//image:req.files != undefined?imagenes:"default.jpg"
-			image: req.file !== undefined ? req.file.filename : "default-image.png"
+			image: req.file !== undefined ? req.file.filename : "default-image.png",
 		};
 
 		userModel.create(newUser)

@@ -4,19 +4,25 @@ const app = express()
 const path = require('path')
 const methodOverride = require('method-override');
 const session = require('express-session')
+const userLoggedMiddleware = require('./middleware/userLoggedMiddleware');
 
+//inicializo session
 app.use(session({
     secret:'xx',
     resave: false,
     saveUninitialized: false,
 }))
-//const session = require("express-session");
+//recien despues puedo preguntar por los datos de esa sesion
+app.use(userLoggedMiddleware);
+
 //const cookies = require("cookie-parser");
+
 //Rutas: hay una a / que es el mainRouter.js
 //y otra a /users que es al userRouter.js
 const mainRouter = require('./routes/mainRouter.js')
 const userRouter = require('./routes/userRouter.js')
 const productsRouter = require('./routes/products.js'); // Rutas /products
+
 //Configuracion de la app
 //Carpetas publicas
 app.use(express.static(path.join(__dirname, '../public')))
