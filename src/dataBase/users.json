@@ -34,5 +34,17 @@
   "password": "$2a$10$sHF9Pj0uGQPTM3lrLEJMl.WKWd29CPBZ/LJybKGM5CPoNjKm0Z2xa",
   "confirmPassword": "prueba",
   "image": "User-img-1659298861120hola.png"
+ },
+ {
+  "id": 4,
+  "nombres": "Marcos",
+  "apellidos": "GO",
+  "nombreUsuario": "marcosgo",
+  "email": "hola@hotmail.com",
+  "fechaNacimiento": "1970-08-10",
+  "domicilio": "Las Lomitas",
+  "password": "$2a$10$1reSJFpqARTzR4jkK2jvf.2yhwaM8lTc0vIVu1xSUOSYalHWNjFfi",
+  "confirmPassword": "123456",
+  "image": "User-img-1660566271128hola.jpg"
  }
 ]
