@@ -15,11 +15,16 @@ const userController = {
 
 	loginProcess: (req, res) => {
 		console.log("llego al proceso de login")
-		let userToLogin = userModel.findFirstByField('nombreUsuario', req.body.nombreUsuario)
+		let userToLogin = userModel.findFirstByField("nombreUsuario", req.body.nombreUsuario)
+
+		console.log(req.body.nombreUsuario)
 		console.log(userToLogin)
+// dos problemas: 1. no encuentra el user.
 
 		if(userToLogin){
+			console.log("llego al if con userToLogin = true")
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
+			
 			if(isOkThePassword){
 
 				// borro la psw para que no quede en las cookies
@@ -28,12 +33,11 @@ const userController = {
 				// en el request, en session genero una propiedad que se va a llamar 
 				//userLogged con la informacion del usuario en sesion
 				req.session.userLogged = userToLogin
-				return res.render('users/profile')
-			}
+				return res.render('users/profile.ejs', {user: req.session.userLogged})
+			}}
 			return res.render('users/login.ejs',{errors: 
 													{credenciales: 
-														{msg: 'las credenciales son invalidas'}}})
-		}
+														{msg: 'Las credenciales son invalidas'}}})
 	},
 
 	logout: (req,res) => {

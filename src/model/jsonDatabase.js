@@ -108,8 +108,7 @@ const modelController = function (name) {
 
         findFirstByField: function(propiedad, text){
             let rows = this.all();
-    
-            let elementFound = rows.find(element => element.propiedad == text);
+            let elementFound = rows.find(element => element[propiedad] == text);
             return elementFound;
         },
 

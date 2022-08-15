@@ -12,11 +12,14 @@
             <i class="fa fa-bars burger"></i>
         </a>
             <div class="clase-iconos-header">
+                <% if(locals.isLogged){%>
+                <span>Hola <%= locals.userLogged.nombreUsuario %> ! </span>
+                <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="/user/profile"><i class="fa-solid fa-user-large"></i></a>
+                <a href="/user/logout">logout</a>  
+                <% } else{%> 
                 <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
                 <i class="fa-brands fa-instagram"></i>
-                <% if(locals.isLogged){%>
-                <a href="/user/profile"><i class="fa-solid fa-user-large"></i></a>     
-                <% } else{%> 
                 <a href="/user/login"><i class="fa-solid fa-user-large"></i></a>
                 <% } %> 
                 <!--<a href="/" ><i class="fa-solid fa-house"></i></a>-->
