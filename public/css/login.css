@@ -20,8 +20,21 @@ body{
 p{
     font-size: 12px;
 }
-
-
+.wrapper{
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+}
+.profile-figure{
+    float: left;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+.datos_user{
+    font-size: 15px;
+    margin-left: 20px;
+}
+.datos_user h4{
+    font-weight: 600;
+}
 .registrate{
     display: flex;
     justify-content: center;

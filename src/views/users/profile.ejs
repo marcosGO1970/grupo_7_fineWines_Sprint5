@@ -14,15 +14,26 @@
         <br>
         <br>
         <!------- Formulario ---------->
-        <div>
-        Estas en el perfil
+        <div class="wrapper">
+          <h2 class="form-title">Perfil de Usuario</h2>
+       
+          <div class="col-12">
+            <figure class="profile-figure">
+             <img src= "/images/users/<%= user.image %>">
+            </figure>
+          <div class="datos_user">
+          <h4>Email: <%= user.email %></h4><br>
+          <h4>Nombre: <%= user.nombreUsuario %></h4><br>
+          <h4>Apellido: <%= user.apellidos %></h4>
+          <br><br><br><br><br><br><br><br><br><br>  <br>
         </div>
-    <br><br><br><br><br>
-    <p>email: <%= user.email %></p>
-    <p>nombre: <%= user.nombreUsuario %></p>
-    <p>apellido: <%= user.apellidos %></p>
-    <img src= "/images/users/<%= user.image %>">
-    <br>  
+        
+    </div> 
+  
+  </div>
+  <br><br>
+    
+    
   </main>
       <!--Incluyo el partial footer-->
   <%- include('../partials/footer.ejs') %>
