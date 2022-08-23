@@ -53,6 +53,68 @@ const userController = {
     register:(req, res) => {
         res.render('users/register.ejs');
     },
+	processRegister: (req, res) => {
+
+        const countries = ["Argentina", "Uruguay", "Paraguay", "Chile", "Bolivia", "Perú", "Brasil", "Ecuador", "Venezuela", "Colombia"]; 
+
+        const { file } = req;
+
+        const errores = validationResult(req);
+
+        if(!errores.isEmpty()){
+            if(file){
+                const filePath = path.join(__dirname, `../../public/images/users/${file.filename}`);
+                fs.unlinkSync(filePath);
+            }
+
+            console.log(req.body);
+
+            delete req.body.password;   
+            delete req.body.confirmPassword;
+
+            console.log(req.body);
+
+            return res.render("./users/register", {
+                errors: errores.mapped(),
+                oldData: req.body,
+                
+            })
+        }
+        
+        const existeEmail = userModel.findFirstByField("email", req.body.email);
+
+        if(existeEmail){
+            if(file){
+                const filePath = path.join(__dirname, `../../public/images/users/${file.filename}`);
+                fs.unlinkSync(filePath);
+            }
+
+            const error = {
+                email: {
+                    msg: "Este email ya está registrado"
+                }
+            }
+
+            return res.render("./users/register", {
+                errors: error,
+                oldData: req.body,
+                
+            })
+        }
+
+        delete req.body.confirmPassword;
+
+        const newUsuario = {
+            ...req.body,
+            password: bcryptjs.hashSync(req.body.password, 10),
+            image: file ? file.filename : "default-user.png"
+        };
+
+        // newUsuario.categoria.trim();
+        userModel.create(newUsuario);
+
+        return res.redirect("/user/login");
+    },
 	// Create -  Method to store
 	store: (req, res) => {
 		

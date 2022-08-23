@@ -46,5 +46,16 @@
   "password": "$2a$10$1reSJFpqARTzR4jkK2jvf.2yhwaM8lTc0vIVu1xSUOSYalHWNjFfi",
   "confirmPassword": "123456",
   "image": "User-img-1660566271128hola.jpg"
+ },
+ {
+  "nombres": "Nuevo con foto",
+  "apellidos": "Doe",
+  "nombreUsuario": "JuanNN",
+  "email": "hola2@hotmail.com",
+  "fechaNacimiento": "2022-08-25",
+  "domicilio": "Las Lomitas",
+  "password": "$2a$10$uAQmi3D6CXJTn9q16jZu6.AyX01TwkcjHJuc.i97UupQAuXvXjKR6",
+  "image": "User-img-1661282921408hola.jpg",
+  "id": 5
  }
 ]

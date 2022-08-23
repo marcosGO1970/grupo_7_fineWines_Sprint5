@@ -23,14 +23,14 @@ const userRegisterValidation = [
         .isLength({ min: 8 }).withMessage("La contraseña debe contener al menos 8 caracteres").bail()
         .custom((value, { req }) => {
 
-            if(value != req.body.rePassword){
+            if(value != req.body.confirmPassword){
                 throw new Error('Las contraseñas no coinciden');
             }
             
             return true;
         }),
 
-    body("rePassword")
+    body("confirmPassword")
         .notEmpty().withMessage("El campo no puede estar vacío").bail()
         .isLength({ min: 8 }).withMessage("La contraseña debe contener al menos 8 caracteres"),
 

@@ -19,7 +19,7 @@ router.get('/register', userController.register);
 //router.post('/', upload.array('image'), userController.store);
 // array() para subir muchos archivos
 
-router.post('/register', upload.single('fotoUsuario'),userRegisterValidation, userController.store);
+router.post('/register', upload.single('fotoUsuario'),userRegisterValidation, userController.processRegister);
 
 router.get('/profile', authMiddleware, userController.profile);
 

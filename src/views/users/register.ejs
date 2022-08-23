@@ -21,43 +21,91 @@
             <div class="form-div">
                 <label for="nombres" class="form-label">Nombres</label>
                 
-                <input type="text" name="nombres" id="nombres" required>
+                <input type="text" name="nombres" id="nombres"
+                value= "<%= locals.oldData ? oldData.nombres: null %>" 
+                >
+                
             </div>
+            <% if (locals.errors && errors.nombres) { %>
+                <div class="errorValidacion">
+                    <%= errors.nombres.msg %>
+                </div> 
+            <% } %>
             <div class="form-div">
                 <label for="apellidos" class="form-label">Apellidos</label>
                 
-                <input type="text" name="apellidos" required>
+                <input type="text" name="apellidos" 
+                value= "<%= locals.oldData ? oldData.apellidos: null %>">
             </div>
+            <% if (locals.errors && errors.apellidos) { %>
+                <div class="errorValidacion">
+                    <%= errors.apellidos.msg %>
+                </div> 
+            <% } %>
             <div class="form-div">
                 <label for="nombreUsuario" class="form-label">Nombre de usuario/a</label>
                 
-                <input type="text" name="nombreUsuario" id="nombreUsuario" required>
+                <input type="text" name="nombreUsuario" id="nombreUsuario" 
+                value= "<%= locals.oldData ? oldData.nombreUsuario: null %>">
             </div>
+            <% if (locals.errors && errors.nombreUsuario) { %>
+                <div class="errorValidacion">
+                    <%= errors.nombreUsuario.msg %>
+                </div> 
+            <% } %>
             <div class="form-div">
                 <label for="email" class="form-label">Email</label>
                 
-                <input type="email" name="email" id="email" required>
-            </div>   
+                <input type="email" name="email" id="email" 
+                value= "<%= locals.oldData ? oldData.email: null %>">
+            </div>  
+            <% if (locals.errors && errors.email) { %>
+                <div class="errorValidacion">
+                    <%= errors.email.msg %>
+                </div> 
+            <% } %> 
             <div class="form-div">
                 <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
-                <input type="date" name="fechaNacimiento" id="fechaNacimiento">
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento"
+                value= "<%= locals.oldData ? oldData.fechaNacimiento: null %>">
             </div>
+            <% if (locals.errors && errors.fechaNacimiento) { %>
+                <div class="errorValidacion">
+                    <%= errors.fechaNacimiento.msg %>
+                </div> 
+            <% } %> 
             <div class="form-div">
                 <label for="domicilio" class="form-label">Domicilio</label>
-                <input type="text" name="domicilio" id="domicilio">
+                <input type="text" name="domicilio" id="domicilio"
+                value= "<%= locals.oldData ? oldData.domicilio: null %>">
             </div>                           
             <div class="form-div">
                 <label for="fotoUsuario" class="form-label">Foto de usuario</label>
                 <input class="foto" type="file" name="fotoUsuario" id="fotoUsuario" accept=".png, .jpeg, .jpg" value="default-image.jpg" >
             </div>
+            <% if (locals.errors && errors.fotoUsuario) { %>
+                <div class="errorValidacion">
+                    <%= errors.fotoUsuario.msg %>
+                </div> 
+            <% } %>
             <div class="form-div">
                 <label for="password" class="form-label">Contraseña</label>
-                <input type="password" name="password" id="password" required>
+                <input type="password" name="password" id="password" >
             </div> 
+            <% if (locals.errors && errors.password) { %>
+                <div class="errorValidacion">
+                    <%= errors.password.msg %>
+                </div> 
+            <% } %>
             <div class="form-div">
                 <label for="confirmPassword" class="form-label">Confirmar Contraseña</label>
-                <input type="password" name="confirmPassword" id="confirmPassword" required>
+                <input type="password" name="confirmPassword" id="confirmPassword" >
             </div>
+            <% if (locals.errors && errors.confirmPassword) { %>
+                <div class="errorValidacion">
+                    <%= errors.confirmPassword.msg %>
+                </div> 
+            <% } %>
             <div class="form-buttons">
                 <button type="submit" class="submit-button">Enviar</button>
                 <button type="reset" class="reset-button">Limpiar</button>
