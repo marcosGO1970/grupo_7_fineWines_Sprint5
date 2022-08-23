@@ -3,7 +3,7 @@ const express = require('express');
 const router= express.Router();
 const guestMiddleware = require('../middleware/guestMiddleware');
 const authMiddleware = require('../middleware/authMiddleware');
-
+const userRegisterValidation = require('../middleware/userRegisterValidation');
 // ************ Controller Require ************
 const userController = require ('../controllers/userController.js')
 const uploadPrep = require('../middleware/middlemulter')
@@ -19,7 +19,7 @@ router.get('/register', userController.register);
 //router.post('/', upload.array('image'), userController.store);
 // array() para subir muchos archivos
 
-router.post('/register', upload.single('fotoUsuario'), userController.store);
+router.post('/register', upload.single('fotoUsuario'),userRegisterValidation, userController.store);
 
 router.get('/profile', authMiddleware, userController.profile);
 
