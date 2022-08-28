@@ -4,6 +4,7 @@ const jsonDB = require('../model/jsonDatabase.js');
 const userModel = jsonDB('users')
 const { validationResult } = require("express-validator");
 const bcryptjs = require('bcryptjs');
+const cookies = require('cookie-parser');
 //Objeto literal userController
 //Viene de userRouter a cada modulo
 
@@ -26,13 +27,15 @@ const userController = {
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password)
 			
 			if(isOkThePassword){
-
 				// borro la psw para que no quede en las cookies
 				delete userToLogin.password;
-				
 				// en el request, en session genero una propiedad que se va a llamar 
 				//userLogged con la informacion del usuario en sesion
 				req.session.userLogged = userToLogin
+                //si recordarme esta selected mando cookie con email/nombreUsuario
+                if(req.body.remember_user) {
+					res.cookie('userEmail', req.body.nombreUsuario, { maxAge: (1000 * 60) * 60 })
+				}
 				return res.render('users/profile.ejs', {user: req.session.userLogged})
 			}}
 			return res.render('users/login.ejs',{errors: 
@@ -41,6 +44,7 @@ const userController = {
 	},
 
 	logout: (req,res) => {
+        res.clearCookie('userEmail');
 		req.session.destroy();
 		return res.redirect('/')
 	},

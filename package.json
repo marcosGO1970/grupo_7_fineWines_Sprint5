@@ -1,5 +1,5 @@
 {
-  "name": "pimienta-con-sal",
+  "name": "fine-wines",
   "version": "1.0.0",
   "description": "https://trello.com/b/YzDmkwff/fine-wines",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-session": "^1.17.3",

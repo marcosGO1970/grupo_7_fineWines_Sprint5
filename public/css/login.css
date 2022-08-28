@@ -111,6 +111,10 @@ form{
     height: 25px;
     border: 1px solid grey;
 }
+.form-div2{
+    margin-left: 22.5%;
+    font-size: small;
+}
 input.foto{
     border:none;
 }

@@ -5,6 +5,7 @@ const path = require('path')
 const methodOverride = require('method-override');
 const session = require('express-session')
 const userLoggedMiddleware = require('./middleware/userLoggedMiddleware');
+const cookies = require('cookie-parser');
 
 //inicializo session
 app.use(session({
@@ -12,10 +13,10 @@ app.use(session({
     resave: false,
     saveUninitialized: false,
 }))
+app.use(cookies());//Para usar cookies
 //recien despues puedo preguntar por los datos de esa sesion
 app.use(userLoggedMiddleware);
 
-//const cookies = require("cookie-parser");
 
 //Rutas: hay una a / que es el mainRouter.js
 //y otra a /users que es al userRouter.js
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, '../public')))
 //Configuraciones template engine: EJS
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
+
 app.use(methodOverride("_method"));//Para poder usar PUT y DELETE
 app.use(express.urlencoded({ extended: false }));//Para formularios
 app.use(express.json());
