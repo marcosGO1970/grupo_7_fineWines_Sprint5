@@ -7,7 +7,7 @@ function userLoggedMiddleware(req, res, next){
 res.locals.isLogged = false;
 
 let emailInCookie = req.cookies.userEmail;
-let userFromCookie = userModel.findFirstByField("nombreUsuario", emailInCookie);
+let userFromCookie = userModel.findFirstByField("email", emailInCookie);
 console.log(userFromCookie);
 
 if (userFromCookie) {

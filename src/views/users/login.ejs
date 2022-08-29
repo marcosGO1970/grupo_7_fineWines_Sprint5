@@ -19,9 +19,8 @@
         <form class="register-form" action="/user/login" method="POST">
            
             <div class="form-div">
-                <label for="nombreUsuario" class="form-label">Nombre de usuario/a</label>
-                <!-- Micro-Desafío 3 required - Clase 15 -->
-                <input type="text" name="nombreUsuario" id="nombreUsuario" >
+                <label for="email" class="form-label">Email usuario/a</label>
+                <input type="email" name="email" id="email" >
             </div>
             <% if(locals.errors && errors.credenciales){ %> 
             <div class="errorValidacion">

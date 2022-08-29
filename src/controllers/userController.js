@@ -16,9 +16,9 @@ const userController = {
 
 	loginProcess: (req, res) => {
 		console.log("llego al proceso de login")
-		let userToLogin = userModel.findFirstByField("nombreUsuario", req.body.nombreUsuario)
+		let userToLogin = userModel.findFirstByField("email", req.body.email)
 
-		console.log(req.body.nombreUsuario)
+		//console.log(req.body.nombreUsuario)
 		console.log(userToLogin)
 // dos problemas: 1. no encuentra el user.
 
@@ -30,11 +30,11 @@ const userController = {
 				// borro la psw para que no quede en las cookies
 				delete userToLogin.password;
 				// en el request, en session genero una propiedad que se va a llamar 
-				//userLogged con la informacion del usuario en sesion
+				//creo userLogged en session con la informacion del usuario
 				req.session.userLogged = userToLogin
                 //si recordarme esta selected mando cookie con email/nombreUsuario
                 if(req.body.remember_user) {
-					res.cookie('userEmail', req.body.nombreUsuario, { maxAge: (1000 * 60) * 60 })
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 				return res.render('users/profile.ejs', {user: req.session.userLogged})
 			}}
@@ -50,7 +50,9 @@ const userController = {
 	},
 
 	profile: (req,res) => {
-		res.render('users/profile.ejs', {user: req.session.userLogged})
+		res.render('users/profile.ejs', {
+            user: req.session.userLogged
+        })
 
 	},
 
