@@ -107,6 +107,11 @@
 						<label for="description" class="form-label">Descripción:</label>
 						<textarea name="description" id="description"  class="form-input"><%= locals.oldData ? oldData.description : null %></textarea>
 					</div>
+					<% if (locals.errors && errors.description) { %>
+					<div class="errorValidacion">
+						<p><%= errors.description.msg %></p>
+					</div> 
+					<% } %>
 					<div class="form-buttons">
 						<button type="submit">Guardar producto</button>
 						<button type="reset" class="reset-button">Limpiar</button>

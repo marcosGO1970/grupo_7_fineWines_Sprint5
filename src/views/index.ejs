@@ -67,6 +67,32 @@
                 <%}}) %>
             </div>               
         </section>
+        <section class="last-visit">
+            <div>
+            <span>Catalogo de Espiritus</span>
+            </div>
+            <div class="products">
+                <% products.forEach(product => {if(product.visitado == false && product.discount == 0){%>
+                    <article class="articulo">
+                        <a href="/productDetail/<%= product.id %>"><img src="images/products/<%= product.image %>" class="product_img"></a>
+                        <div class="detalle">
+                            <div class="price-and-discount">
+                                <p class="price">$<%= product.price %></p>
+                                <% if(product.descuento > 0){%>
+                                <p class="discount"><%= product.discount*100 + '% OFF' %></p>
+                                <%}%>
+                                <i class="fa-solid fa-cart-shopping"></i>
+                            </div>
+                                <div>
+                                    <h4 class="bodega"><%= product.bodega %></h4>
+                                    <h5 class="varietal"><%= product.varietal %></h5>
+                                </div>
+                        </div>
+                    </article>
+                <%}}) %>
+            </div>
+                  
+        </section>
     </main>
         <%- include('./partials/footer.ejs') %>
 </body>

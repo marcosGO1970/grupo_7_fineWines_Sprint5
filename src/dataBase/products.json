@@ -110,5 +110,33 @@
    "Escorihuela Gascón Malbec Full.jpg"
   ],
   "visitado": false
+ },
+ {
+  "name": "Malbec Oro",
+  "bodega": "Zapata",
+  "varietal": "Blanco",
+  "price": "3000",
+  "discount": "0",
+  "category": "Blanco",
+  "description": "El combo para Papa y Mama!",
+  "image": [
+   "Product-img-1661952798832hola.jpg"
+  ],
+  "id": 9,
+  "visitado": false
+ },
+ {
+  "name": "Champagna",
+  "bodega": "Salentein",
+  "varietal": "Blanco",
+  "price": "5000",
+  "discount": "0",
+  "category": "Espumante",
+  "description": "Ideal Partuza!",
+  "visitado": false,
+  "image": [
+   "Product-img-1661953091459hola.jpg"
+  ],
+  "id": 10
  }
 ]

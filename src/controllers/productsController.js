@@ -93,6 +93,7 @@ const controller = {
         // Atrapo todos los campos del formulario
         const newProduct = {
             ...req.body,
+            visitado: false,
             // Si no mando imágenes pongo una por defecto
             image: req.files.length >= 1 ? imagenes : ["default-image.png"]
         }
