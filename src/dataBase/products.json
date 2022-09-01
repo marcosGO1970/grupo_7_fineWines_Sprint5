@@ -138,5 +138,33 @@
    "Product-img-1661953091459hola.jpg"
   ],
   "id": 10
+ },
+ {
+  "name": "Cordero Piel de Lobo",
+  "bodega": "Mendoza",
+  "varietal": "Malbec ",
+  "price": "3000",
+  "discount": "0",
+  "category": "Tinto",
+  "description": "Ideal asadito con amigos",
+  "visitado": false,
+  "image": [
+   "Product-img-1662064111935hola.jpg"
+  ],
+  "id": 11
+ },
+ {
+  "name": "Trapiche Reserva",
+  "bodega": "Trapiche",
+  "varietal": "Malbec ",
+  "price": "2000",
+  "discount": "0",
+  "category": "Tinto",
+  "description": "Acompaña cualquier comilona!",
+  "visitado": false,
+  "image": [
+   "Product-img-1662064212063hola.jpg"
+  ],
+  "id": 12
  }
 ]

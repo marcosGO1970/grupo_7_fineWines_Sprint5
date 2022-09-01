@@ -44,18 +44,18 @@
   "fechaNacimiento": "1970-08-10",
   "domicilio": "Las Lomitas",
   "password": "$2a$10$1reSJFpqARTzR4jkK2jvf.2yhwaM8lTc0vIVu1xSUOSYalHWNjFfi",
-  "confirmPassword": "123456",
-  "image": "User-img-1660566271128hola.jpg"
+  "image": "User-img-1660566271128hola.jpg",
+  "admin": "true"
  },
  {
-  "nombres": "Nuevo con foto",
+  "nombres": "JuanNN",
   "apellidos": "Doe",
-  "nombreUsuario": "JuanNN",
+  "nombreUsuario": "JuanDoe",
   "email": "hola2@hotmail.com",
-  "fechaNacimiento": "2022-08-25",
-  "domicilio": "Las Lomitas",
-  "password": "$2a$10$uAQmi3D6CXJTn9q16jZu6.AyX01TwkcjHJuc.i97UupQAuXvXjKR6",
-  "image": "User-img-1661282921408hola.jpg",
+  "fechaNacimiento": "2022-09-27",
+  "domicilio": "Las Lajas",
+  "password": "$2a$10$Ij9pJzMmyITW5vt7Txgx..CAEzuiV2BMsCq.5dUj2G1VsDTRzwoXm",
+  "image": "User-img-1660566271128hola.jpg",
   "id": 5
  }
 ]

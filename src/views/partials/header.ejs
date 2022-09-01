@@ -13,6 +13,9 @@
         </a>
             <div class="clase-iconos-header">
                 <% if(locals.isLogged){%>
+                    <img src="/images/users/<%= userLogged.image %> " 
+                            alt="Imagen de usuario" 
+                            style="border-radius: 100%; width: 40px; vertical-align:top; margin-right: 10px; position: relative; top: -3px">
                 <span>Hola <%= locals.userLogged.nombreUsuario %> ! </span>
                 <a href="/productCart"><i class="fa-solid fa-cart-shopping"></i></a>
                 <a href="/user/profile"><i class="fa-solid fa-user-large"></i></a>
@@ -32,8 +35,8 @@
                 <li><a href="#">BLANCOS</a></li>
                 <li><a href="#">ROSADOS</a></li>
                 <li><a href="#">ESPUMANTES</a></li>
-                <% if(!locals.isLogged){%>
-                    <% } else{%> 
+                <% if(locals.isLogged && userLogged.admin){%>
+                   
                         <li><a href="/products/create">Admin</a></li>
                        <% } %>
             </ul>
