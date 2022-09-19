@@ -57,5 +57,16 @@
   "password": "$2a$10$Ij9pJzMmyITW5vt7Txgx..CAEzuiV2BMsCq.5dUj2G1VsDTRzwoXm",
   "image": "User-img-1660566271128hola.jpg",
   "id": 5
+ },
+ {
+  "nombres": "nuevo intento",
+  "apellidos": "intento",
+  "nombreUsuario": "intento",
+  "email": "intento@gmail.com",
+  "fechaNacimiento": "1111-11-21",
+  "domicilio": "dddddd",
+  "password": "$2a$10$oBkorrbkKCuvWe6qxfS9DO4.xOiaaR6lcP95u4kZ2KiBYNHSySMWu",
+  "image": "default-user.png",
+  "id": 6
  }
 ]
